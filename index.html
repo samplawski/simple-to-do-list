@@ -35,16 +35,18 @@
 
     <form class="js-form form">
       <h2 class="form__heading">Dodaj nowe zadanie</h2>
-      <input
-        class="js-newTask form__inputBox"
-        autofocus
-        placeholder="Co jest do zrobienia?"
-        title="Wpisz zadanie do wykonania"
-      />
-      <button class="form__button">Dodaj zadanie</button>
+      <p class="form__inputBox">
+        <input
+          class="js-newTask form__newTask"
+          autofocus
+          placeholder="Co jest do zrobienia?"
+          title="Wpisz zadanie do wykonania"
+        />
+        <button class="form__button">Dodaj zadanie</button>
+      </p>
     </form>
     <div class="tasksList">
-      <h2>Lista zadań</h2>
+      <h2 class="tasksList__heading">Lista zadań</h2>
       <ul class="js-tasks"></ul>
     </div>
   </body>

@@ -13,6 +13,8 @@ html {
     background-color: #eee;
     font-family: 'Montserrat', sans-serif;
     max-width: 90%;
-    margin: 50px;
+    margin: 20px;
     padding: 20px;
+    margin: 20px auto 10px;
+
 }

@@ -1,4 +1,6 @@
-.form {}
+.form {
+    padding: 10px;
+}
 
 .form__heading {
     background-color: snow;
@@ -10,13 +12,14 @@
     padding: 20px;
 }
 
+.form__newTask {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
 .form__button {
     color: white;
     background-color: teal;
-}
-
-.list__item {}
-
-.list__item--done {
-    text-decoration: line-through
+    padding: 10px;
+    border: none;
 }
