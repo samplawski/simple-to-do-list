@@ -1,20 +1,14 @@
 {
-    const tasks = [
-        {
-            content: "zrobić listę zadań",
-            done: false,
-        },
-        {
-            content: "zjeść śniadanie",
-            done: true,
-        },
-    ];
+    const form = document.querySelector(".js-form");
 
+    const tasks = [];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
         });
+
+
 
         render();
     };
@@ -80,14 +74,13 @@
         }
 
         addNewTask(newTaskContent);
+        form.reset();
 
     };
 
 
     const init = () => {
         render();
-
-        const form = document.querySelector(".js-form");
 
         form.addEventListener("submit", onFormSubmit);
     };
