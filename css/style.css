@@ -7,3 +7,12 @@ html {
 ::before {
     box-sizing: inherit;
 }
+
+.body {
+    overflow-wrap: anywhere;
+    background-color: #eee;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 90%;
+    margin: 50px;
+    padding: 20px;
+}

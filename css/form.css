@@ -1,12 +1,18 @@
 .form {
     display: grid;
+    grid-template-rows: 2;
+    max-width: 900px;
+    background-color: snow;
+    padding: 20px;
 
 }
 
-.list__item {
-    color: brown;
-
+.form__button {
+    color: white;
+    background-color: teal;
 }
+
+.list__item {}
 
 .list__item--done {
     text-decoration: line-through
