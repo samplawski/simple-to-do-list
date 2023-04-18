@@ -1,0 +1,13 @@
+.form {
+    display: grid;
+
+}
+
+.list__item {
+    color: brown;
+
+}
+
+.list__item--done {
+    text-decoration: line-through
+}
