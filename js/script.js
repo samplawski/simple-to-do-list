@@ -1,7 +1,22 @@
 {
     const form = document.querySelector(".js-form");
 
-    const tasks = [];
+    const tasks = [
+        {
+            content: "Create a to-do list.",
+            done: true,
+        },
+
+        {
+            content: "Have fun writing the code.",
+            done: true,
+        },
+
+        {
+            content: "Go for a walk.",
+            done: false,
+        },
+    ];
 
 
     const addNewTask = (newTaskContent) => {
