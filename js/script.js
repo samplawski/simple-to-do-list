@@ -69,7 +69,12 @@
                     ${task.done ? "✔" : ""}</button>
                     <p class="${task.done ? "tasksList__item--done" : ""}">${task.content} </p>
 
-                    <button class="js-remove tasksList__button tasksList__button--remove ">🗑️</button>
+                    <button class="js-remove tasksList__button tasksList__button--remove ">
+                    <img
+                        class="tasksList__button--trash"
+                        src="./images/red-bin.jpg"
+                        alt="trash-bin-icon"🗑️
+                    </button>
                 </li>
         `;
         }

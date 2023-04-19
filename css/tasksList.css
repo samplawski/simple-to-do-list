@@ -61,3 +61,8 @@
     border-radius: 2px;
     transform: scale(1.05);
 }
+
+.tasksList__button--trash {
+    height: 30px;
+    width: 30px;
+}
