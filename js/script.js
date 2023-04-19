@@ -13,13 +13,11 @@
         },
     ];
 
+
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
         });
-
-
-
         render();
     };
 
@@ -27,13 +25,13 @@
     const removeTask = (taskIndex) => {
         tasks.splice(taskIndex, 1);
         render();
-    }
+    };
 
 
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done
         render();
-    }
+    };
 
 
     const bindEvents = () => {
@@ -60,21 +58,23 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li
-                    class="tasksList__item${task.done ? " tasksList__item--done" : ""}" >
-                                          
-                   <button class="js-done tasksList__button"> &#x2705;</button>
-                   
-                    ${task.content}
+                <li class="tasksList__item">
+                                                              
+                   <button class="js-done tasksList__button tasksList__button--done"> 
+                   ${task.done ? "✔" : ""}</button>
+                   <p class="${task.done ? "tasksList__item--done" : ""}">${task.content} </p>
 
-                    <button class="js-remove tasksList__button tasksList__button--remove ">🗑</button>
+                    <button class="js-remove tasksList__button tasksList__button--remove ">&#xe020;</button>
                 </li>
         `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
-
+        document.querySelector(".js-stats").innerHTML = `
+        Liczba wszystkich zadań: ${tasks.length}\n
+        Liczba ukończonych zadań: ${tasks.filter(task => task.done).length}
+        `;
 
         bindEvents();
     };
