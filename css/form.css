@@ -1,5 +1,5 @@
 .form {
-    background-color: snow;
+    background-color: hsl(0, 100%, 99%);
     padding: 0px 10px;
     margin: 0 auto 10px;
 }
@@ -7,7 +7,7 @@
 .form__heading {
     padding: 20px;
     margin-bottom: 10px;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid hsl(0, 0%, 93%);
 }
 
 .form__inputBox {
@@ -19,12 +19,12 @@
 
 .form__newTask {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid hsl(0, 0%, 87%);
 }
 
 .form__button {
-    color: white;
-    background-color: teal;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(180, 100%, 25%);
     padding: 10px;
     border: none;
 }

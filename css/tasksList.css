@@ -1,6 +1,6 @@
 .tasksList {
     list-style: none;
-    background-color: snow;
+    background-color: hsl(0, 100%, 99%);
     padding: 0px;
     margin: 0 auto;
 }
@@ -8,7 +8,7 @@
 .tasksList__heading {
     padding: 20px;
     margin: 10px;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid hsl(0, 0%, 93%);
 }
 
 .tasksList__box {
@@ -21,7 +21,7 @@
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid hsl(0, 0%, 87%);
     margin: 0px;
 }
 
@@ -31,7 +31,7 @@
 
 .tasksList__button {
     border: none;
-    color: white;
+    color: hsl(0, 0%, 100%);
     width: 30px;
     height: 30px;
     margin: 5px;

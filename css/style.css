@@ -10,7 +10,7 @@ html {
 
 .body {
     overflow-wrap: anywhere;
-    background-color: #eee;
+    background-color: hsl(0, 0%, 93%);
     font-family: 'Montserrat', sans-serif;
     max-width: 90%;
     margin: 20px;
