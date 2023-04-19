@@ -1,13 +1,17 @@
 .tasksList {
     list-style: none;
     background-color: snow;
-    padding: 10px;
+    padding: 0px;
     margin: 0 auto;
 }
 
 .tasksList__heading {
-    padding: 10px;
+    padding: 15px 10px;
+    border-bottom: 2px solid #eee;
+}
 
+.tasksList__box {
+    padding: 20px;
 }
 
 .tasksList__item {
@@ -56,4 +60,13 @@
     border-style: solid;
     border-radius: 2px;
     transform: scale(1.05);
+}
+
+.tasksList__stats {
+    background-color: snow;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+
 }

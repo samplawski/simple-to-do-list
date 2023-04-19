@@ -72,7 +72,7 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
         document.querySelector(".js-stats").innerHTML = `
-        Liczba wszystkich zadań: ${tasks.length}\n
+        Liczba wszystkich zadań: ${tasks.length}<br>
         Liczba ukończonych zadań: ${tasks.filter(task => task.done).length}
         `;
 

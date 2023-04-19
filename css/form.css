@@ -1,11 +1,13 @@
 .form {
     background-color: snow;
-    padding: 10px;
+    padding: 0px 10px;
     margin: 0 auto 10px;
 }
 
 .form__heading {
     padding: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
 }
 
 .form__inputBox {
