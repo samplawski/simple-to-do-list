@@ -46,7 +46,7 @@ The CSS code is used for styling the web application. It includes styles for the
 
 To run the application locally, follow these steps:
 
-- Clone the repository to your local device using the command git clone https://github.com/samplawski/task-list.git
+- Clone the repository to your local device using the command git clone https://github.com/samplawski/simple-to-do-list.git
 - Navigate to the project directory using the command cd task-list
 - Open the index.html file in your web browser
 
