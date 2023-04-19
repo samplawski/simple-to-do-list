@@ -90,7 +90,7 @@
 
         addNewTask(newTaskContent);
         form.reset();
-
+        document.querySelector(".js-newTask").focus();
     };
 
 
