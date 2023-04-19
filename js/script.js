@@ -50,11 +50,11 @@
             htmlString += `
                 <li class="tasksList__item">
                                                               
-                   <button class="js-done tasksList__button tasksList__button--done"> 
-                   ${task.done ? "✔" : ""}</button>
-                   <p class="${task.done ? "tasksList__item--done" : ""}">${task.content} </p>
+                    <button class="js-done tasksList__button tasksList__button--done"> 
+                    ${task.done ? "✔" : ""}</button>
+                    <p class="${task.done ? "tasksList__item--done" : ""}">${task.content} </p>
 
-                    <button class="js-remove tasksList__button tasksList__button--remove ">&#xe020;</button>
+                    <button class="js-remove tasksList__button tasksList__button--remove ">🗑️</button>
                 </li>
         `;
         }
@@ -78,11 +78,17 @@
         document.querySelector(".js-newTask").focus();
     };
 
+    const onAddTaskButtonClick = () => {
+        document.querySelector(".js-newTask").focus();
+    };
 
     const init = () => {
         render();
 
         form.addEventListener("submit", onFormSubmit);
+
+        const onAddTaskButtonClickFocus = document.querySelector(".form__button");
+        onAddTaskButtonClickFocus.addEventListener("click", onAddTaskButtonClick);
     };
 
     init();
