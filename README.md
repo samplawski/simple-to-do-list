@@ -3,7 +3,7 @@ This is a simple task list management application that allows you to add, remove
 
 You can try the application at this [link](https://samplawski.github.io/simple-to-do-list/).
 
-<img src="./images/screenshot.jpg" width="45%" alt="to-do list screenshot">
+<img src="./images/screenshot.jpg" width="60%" alt="to-do list screenshot">
 
 ## Table of Contents
 
