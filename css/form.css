@@ -26,3 +26,18 @@
     padding: 10px;
     border: none;
 }
+
+@media (max-width:767px) {
+    .form__inputBox {
+        grid-template-columns: auto;
+        grid-gap: 10px;
+    }
+
+    .form__newTask {
+        width: 100%;
+    }
+
+    .form__button {
+        width: 100%;
+    }
+}
