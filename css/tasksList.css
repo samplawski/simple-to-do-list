@@ -2,6 +2,7 @@
     list-style: none;
     background-color: snow;
     padding: 10px;
+    margin: 0 auto;
 }
 
 .tasksList__heading {
@@ -15,20 +16,20 @@
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
-
     border-bottom: 1px solid #ddd;
+    margin: 20px 0;
 }
 
 .tasksList__item--done {
-    text-decoration: line-through
+    text-decoration: line-through;
 }
 
-.tasksList__button-done {
+.tasksList__button {
     background: hsl(120, 61%, 34%);
     border: none;
 }
 
 .tasksList__button--remove {
     background-color: hsl(348, 83%, 47%);
-    border: none;
+
 }

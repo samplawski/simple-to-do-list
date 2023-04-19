@@ -1,15 +1,18 @@
 .form {
+    background-color: snow;
     padding: 10px;
+    margin: 0 auto 10px;
 }
 
 .form__heading {
-    background-color: snow;
     padding: 20px;
 }
 
 .form__inputBox {
-    background-color: snow;
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 15px;
 }
 
 .form__newTask {

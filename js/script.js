@@ -1,7 +1,17 @@
 {
     const form = document.querySelector(".js-form");
 
-    const tasks = [];
+    const tasks = [
+        {
+            content: "test 1",
+            done: false,
+        },
+
+        {
+            content: "test 2",
+            done: true,
+        },
+    ];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -52,16 +62,19 @@
             htmlString += `
                 <li
                     class="tasksList__item${task.done ? " tasksList__item--done" : ""}" >
-
-                    <button class="js-done tasksList__button-done"> &#x2705;</button>
+                                          
+                   <button class="js-done tasksList__button"> &#x2705;</button>
                    
                     ${task.content}
-                    <button class="js-remove tasksList__button--remove ">🗑</button>
+
+                    <button class="js-remove tasksList__button tasksList__button--remove ">🗑</button>
                 </li>
         `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+
+
 
         bindEvents();
     };
