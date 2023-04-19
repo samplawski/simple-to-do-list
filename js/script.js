@@ -1,17 +1,7 @@
 {
     const form = document.querySelector(".js-form");
 
-    const tasks = [
-        {
-            content: "test 1",
-            done: false,
-        },
-
-        {
-            content: "test 2",
-            done: true,
-        },
-    ];
+    const tasks = [];
 
 
     const addNewTask = (newTaskContent) => {
@@ -70,11 +60,6 @@
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
-
-        document.querySelector(".js-stats").innerHTML = `
-        Liczba wszystkich zadań: ${tasks.length}<br>
-        Liczba ukończonych zadań: ${tasks.filter(task => task.done).length}
-        `;
 
         bindEvents();
     };

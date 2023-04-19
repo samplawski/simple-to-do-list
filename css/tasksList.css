@@ -6,7 +6,8 @@
 }
 
 .tasksList__heading {
-    padding: 15px 10px;
+    padding: 20px;
+    margin: 10px;
     border-bottom: 2px solid #eee;
 }
 
@@ -39,7 +40,6 @@
 
 .tasksList__button--done {
     background: hsl(122, 65%, 29%);
-
 }
 
 .tasksList__button--done:active {
@@ -60,13 +60,4 @@
     border-style: solid;
     border-radius: 2px;
     transform: scale(1.05);
-}
-
-.tasksList__stats {
-    background-color: snow;
-    padding: 10px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-end;
-
 }
