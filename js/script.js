@@ -73,7 +73,7 @@
                     <span class="${task.done ? "tasksList__item--done" : ""}">${task.content}
                     </span>
 
-                    <button class="js-remove tasksList__button tasksList__button--remove ">
+                    <button class="js-remove tasksList__button tasksList__button--remove">
                     <img
                         class="tasksList__button--trash"
                         src="./images/red-bin.jpg"
