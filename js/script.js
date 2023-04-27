@@ -67,8 +67,11 @@
                 <li class="tasksList__item">
                                                               
                     <button class="js-done tasksList__button tasksList__button--toggleDone"> 
-                    ${task.done ? "✔" : ""}</button>
-                    <p class="${task.done ? "tasksList__item--done" : ""}">${task.content} </p>
+                    ${task.done ? "✔" : ""}
+                    </button>
+                    
+                    <span class="${task.done ? "tasksList__item--done" : ""}">${task.content}
+                    </span>
 
                     <button class="js-remove tasksList__button tasksList__button--remove ">
                     <img
@@ -89,9 +92,10 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        const inputElement = document.querySelector(".js-newTask");
 
+        const inputElement = document.querySelector(".js-newTask");
         const newTaskContent = inputElement.value.trim();
+
         if (newTaskContent === "") {
             return;
         }
