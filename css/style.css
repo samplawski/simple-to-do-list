@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    background: hsl(0, 0%, 87%);
 }
 
 *,
@@ -8,12 +9,8 @@ html {
     box-sizing: inherit;
 }
 
-.body {
+body {
     overflow-wrap: anywhere;
-    background-color: hsl(0, 0%, 93%);
+    background-color: hsl(0, 0%, 87%);
     font-family: 'Montserrat', sans-serif;
-    max-width: 1200px;
-    margin: 20px;
-    padding: 20px;
-    margin: 20px auto 10px;
 }

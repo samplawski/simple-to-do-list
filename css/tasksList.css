@@ -1,18 +1,7 @@
 .tasksList {
     list-style: none;
-    background-color: hsl(0, 100%, 99%);
-    padding: 0px;
-    margin: 0 auto;
-}
-
-.tasksList__heading {
-    padding: 20px;
-    margin: 10px;
-    border-bottom: 2px solid hsl(0, 0%, 93%);
-}
-
-.tasksList__box {
-    padding: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .tasksList__item {
@@ -22,7 +11,6 @@
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid hsl(0, 0%, 87%);
-    margin: 0px;
 }
 
 .tasksList__item--done {
@@ -34,19 +22,19 @@
     color: hsl(0, 0%, 100%);
     width: 30px;
     height: 30px;
-    margin: 5px;
     padding: 0px;
 }
 
-.tasksList__button--done {
-    background: hsl(122, 65%, 29%);
+.tasksList__button--toggleDone {
+    background: hsl(120, 61%, 34%);
 }
 
-.tasksList__button--done:active {
-    border-width: 1px;
-    border-style: solid;
-    border-color: hsl(0, 0%, 0%);
-    border-radius: 4px;
+.tasksList__button--toggleDone:hover {
+    background: hsl(120, 61%, 39%);
+}
+
+.tasksList__button--toggleDone:active {
+    background: hsl(120, 61%, 44%);
     transform: scale(1.05);
 }
 
@@ -54,11 +42,12 @@
     background-color: hsl(348, 83%, 47%);
 }
 
+.tasksList__button--remove:hover {
+    background-color: hsl(348, 83%, 52%);
+}
+
 .tasksList__button--remove:active {
-    border-width: 1px;
-    border-color: hsl(0, 0%, 0%);
-    border-style: solid;
-    border-radius: 2px;
+    background-color: hsl(348, 83%, 57%);
     transform: scale(1.05);
 }
 
