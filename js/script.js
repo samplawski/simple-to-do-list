@@ -1,6 +1,4 @@
 {
-    const form = document.querySelector(".js-form");
-
     const tasks = [
         {
             content: "Create a to-do list.",
@@ -87,15 +85,16 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        const inputElement = document.querySelector(".js-newTask");
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTaskContent = inputElement.value.trim();
         if (newTaskContent === "") {
             return;
         }
 
         addNewTask(newTaskContent);
-        form.reset();
-        document.querySelector(".js-newTask").focus();
+        inputElement.value = "";
+        inputElement.focus();
     };
 
     const onAddTaskButtonClick = () => {
@@ -105,6 +104,7 @@
     const init = () => {
         render();
 
+        const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
 
         const onAddTaskButtonClickFocus = document.querySelector(".form__button");
