@@ -1,5 +1,5 @@
 {
-    let tasks = [ //tablica "tasks" nie ma być mutowana, nie ma być tasks.splice(taskIndex, 1); / // tasks.push({ content: newTaskContent, });
+    let tasks = [
         {
             content: "Create a to-do list.",
             done: true,
@@ -15,7 +15,7 @@
             done: false,
         },
     ];
-    console.log([tasks]);
+
 
     let hideDoneTasks = false; //ukryj ukończone zadania; kliknięcie w przycisk będzie przełązało true/false
 
@@ -23,13 +23,9 @@
     const addNewTask = (newTaskContent) => {
         tasks = [
             ...tasks,
-            { content: newTaskContent },
+            { content: newTaskContent, done: false },
         ];
 
-
-        // tasks.push({
-        //     content: newTaskContent,
-        // });
         render();
     };
 
@@ -40,15 +36,17 @@
             ...tasks.slice(taskIndex + 1)
         ];
 
-        //tasks.splice(taskIndex, 1);
         render();
     };
 
 
     const toggleTaskDone = (taskIndex) => {
-        //tasks = tasks.map(tasks[taskIndex].done => !tasks[taskIndex].done)
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            { ...tasks[taskIndex], done: !tasks[taskIndex].done },
+            ...tasks.slice(taskIndex + 1),
+        ];
 
-        tasks[taskIndex].done = !tasks[taskIndex].done
         render();
     };
 
