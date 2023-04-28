@@ -41,20 +41,32 @@
 
 
     const toggleTaskDone = (taskIndex) => {
-        tasks = [
-            ...tasks.slice(0, taskIndex),
-            { ...tasks[taskIndex], done: !tasks[taskIndex].done },
-            ...tasks.slice(taskIndex + 1),
-        ];
+        // tasks = [
+        //     ...tasks.slice(0, taskIndex),
+        //     { ...tasks[taskIndex], done: !tasks[taskIndex].done },
+        //     ...tasks.slice(taskIndex + 1),
+        // ];
 
+        //lub
+
+        // tasks = tasks.map((task, index) => {
+        //     if (index === taskIndex) {
+        //         return { ...task, done: !task.done };
+        //     } else {
+        //         return task;
+        //     }
+        // });
+
+        // lub
+
+        tasks = tasks.map((task, index) => index === taskIndex ? { ...task, done: !task.done } : task
+        );
         render();
     };
 
 
-    const toggleAllTaskDone = (taskIndex) => { //do zaznaczania wszystkich jako ukończone
-        //tasks = tasks.map(tasks[taskIndex].done => !tasks[taskIndex].done)
-
-        tasks[taskIndex].done = !tasks[taskIndex].done
+    const toggleAllTasksDone = (taskIndex) => { //do zaznaczania wszystkich jako ukończone
+        tasks = tasks.map((task) => ({ ...task, done: true }));
         render();
     };
 
@@ -117,7 +129,6 @@
     const bindButtonsEvents = () => { //event listenery dodane do przycisków,
         //tak jak renderTasks(); powinna zrobić HTML na podstawie np. let htmlString = ""; i
         // let hideDoneTasks = false; , któtego wrzuci do elementu, w którym te przyciski mają się znaleźć
-
     };
 
 
@@ -146,9 +157,11 @@
         inputElement.focus();
     };
 
+
     const onAddTaskButtonClick = () => {
         document.querySelector(".js-newTask").focus();
     };
+
 
     const init = () => {
         render();
