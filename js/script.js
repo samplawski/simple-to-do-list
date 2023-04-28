@@ -1,5 +1,5 @@
 {
-    const tasks = [
+    let tasks = [ //tablica "tasks" nie ma być mutowana, nie ma być tasks.splice(taskIndex, 1); / // tasks.push({ content: newTaskContent, });
         {
             content: "Create a to-do list.",
             done: true,
@@ -15,23 +15,47 @@
             done: false,
         },
     ];
+    console.log([tasks]);
+
+    let hideDoneTasks = false; //ukryj ukończone zadania; kliknięcie w przycisk będzie przełązało true/false
 
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            { content: newTaskContent },
+        ];
+
+
+        // tasks.push({
+        //     content: newTaskContent,
+        // });
         render();
     };
 
 
     const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            ...tasks.slice(taskIndex + 1)
+        ];
+
+        //tasks.splice(taskIndex, 1);
         render();
     };
 
 
     const toggleTaskDone = (taskIndex) => {
+        //tasks = tasks.map(tasks[taskIndex].done => !tasks[taskIndex].done)
+
+        tasks[taskIndex].done = !tasks[taskIndex].done
+        render();
+    };
+
+
+    const toggleAllTaskDone = (taskIndex) => { //do zaznaczania wszystkich jako ukończone
+        //tasks = tasks.map(tasks[taskIndex].done => !tasks[taskIndex].done)
+
         tasks[taskIndex].done = !tasks[taskIndex].done
         render();
     };
@@ -59,7 +83,7 @@
     };
 
 
-    const render = () => {
+    const renderTasks = () => { //renderuje zadania
         let htmlString = "";
 
         for (const task of tasks) {
@@ -84,9 +108,28 @@
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+    };
+
+
+    const renderButtons = () => { //renderuje przyciski
+
+    };
+
+
+    const bindButtonsEvents = () => { //event listenery dodane do przycisków,
+        //tak jak renderTasks(); powinna zrobić HTML na podstawie np. let htmlString = ""; i
+        // let hideDoneTasks = false; , któtego wrzuci do elementu, w którym te przyciski mają się znaleźć
+
+    };
+
+
+    const render = () => {
+        renderTasks();
+        renderButtons();
 
         bindRemoveEvents();
         bindToggleDoneEvents();
+        bindButtonsEvents();
     };
 
 
