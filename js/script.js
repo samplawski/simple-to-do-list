@@ -122,7 +122,22 @@
 
 
     const renderButtons = () => { //renderuje przyciski
+        if (!tasks.length) {
+            document.querySelector(".js-buttons").innerHTML = "";
+            return;
+        };
 
+        for (const task of tasks) {
+            document.querySelector(".js-buttons").innerHTML = `
+            <button class="js-buttons section__headingButton section__headingButton-toggleHideDone">
+            ${task.done ? "Pokaż ukończone" : "Ukryj ukończone"}
+             </button>
+                    
+            <button class="js-buttons section__headingButton section__headingButton--finishAll">
+            Ukończ wszystkie
+            </button>
+            `;
+        }
     };
 
 
