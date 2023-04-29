@@ -13,9 +13,9 @@
     border-bottom: 1px solid hsl(0, 0%, 87%);
 }
 
-/* .tasksList__item--hidden {
+.tasksList__item--hidden {
     display: none;
-} */
+}
 
 .tasksList__item--done {
     text-decoration: line-through;
