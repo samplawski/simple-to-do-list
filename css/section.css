@@ -16,10 +16,22 @@
     padding: 20px;
 }
 
+.section__buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}
+
 .section__headingButton {
     display: inline;
     background: none;
     border: none;
+}
+
+@media (max-width: 767px) {
+    .section__buttons {
+        grid-template-columns: 1fr;
+    }
 }
 
 .section__headingButton:hover {

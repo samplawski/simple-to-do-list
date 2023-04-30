@@ -103,11 +103,11 @@
 
         for (const task of tasks) {
             document.querySelector(".js-buttons").innerHTML = `
-            <button class="js-buttons js-toggleHideTasksDoneButton section__headingButton section__headingButton-toggleHideDone">
-            ${task.done ? "Pokaż ukończone" : "Ukryj ukończone"}
+            <button class="js-buttons js-toggleHideTasksDoneButton section__headingButton">
+            ${hideDoneTasks === false ? "Ukryj" : "Pokaż"} ukończone
              </button>
                     
-            <button class="js-buttons js-allTasksDoneButton section__headingButton section__headingButton--finishAll">
+            <button class="js-buttons js-allTasksDoneButton section__headingButton">
             Ukończ wszystkie
             </button>
             `;
