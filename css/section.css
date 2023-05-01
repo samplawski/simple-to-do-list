@@ -3,13 +3,24 @@
     background: white;
 }
 
-.section__heading {
-    font-size: 20px;
+.section__header {
+    border-bottom: 1px solid hsl(0, 0%, 87%);
     padding: 20px;
     margin: 0;
-    border-bottom: 1px solid hsl(0, 0%, 87%);
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr auto;
+}
+
+@media (max-width: 767px) {
+    .section__header {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__heading {
+    font-size: 20px;
+
+
 }
 
 .section__body {

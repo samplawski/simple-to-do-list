@@ -108,6 +108,7 @@
              </button>
                     
             <button class="js-buttons js-allTasksDoneButton section__headingButton">
+            ${tasks.every(({ hideDoneTasks }) => hideDoneTasks === true) ? "disabled" : ""}
             Ukończ wszystkie
             </button>
             `;
