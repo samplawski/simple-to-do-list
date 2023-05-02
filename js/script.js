@@ -65,7 +65,6 @@
     };
 
 
-    // const markAllTasksDone = (tasks) => tasks.every(({ done }) => done);
     const markAllTasksDone = () => { //do zaznaczania wszystkich jako ukończone
         tasks = tasks.map((task) => ({ ...task, done: true }));
         render();
@@ -94,6 +93,15 @@
     };
 
 
+    const checkAllTasksDone = () => {
+        const allTasksDoneButton = document.querySelector(".js-allTasksDoneButton");
+        if (tasks.every(({ done }) => done === true)) {
+            allTasksDoneButton.disabled = true;
+        } else {
+            allTasksDoneButton.disabled = false;
+        }
+    };
+
 
     const renderButtons = () => { //renderuje przyciski
         if (!tasks.length) {
@@ -101,19 +109,36 @@
             return;
         };
 
-        for (const task of tasks) {
-            document.querySelector(".js-buttons").innerHTML = `
-            <button class="js-buttons js-toggleHideTasksDoneButton section__headingButton">
-            ${hideDoneTasks === false ? "Ukryj" : "Pokaż"} ukończone
-             </button>
-                    
-            <button class="js-buttons js-allTasksDoneButton section__headingButton">
-            ${tasks.every(({ hideDoneTasks }) => hideDoneTasks === true) ? "disabled" : ""}
-            Ukończ wszystkie
-            </button>
-            `;
+        // for (const task of tasks) {
+        //     document.querySelector(".js-buttons").innerHTML = `
+        //     <button class="js-buttons js-toggleHideTasksDoneButton section__headingButton">
+        //     ${hideDoneTasks === false ? "Ukryj" : "Pokaż"} ukończone
+        //      </button>
+
+        //     <button class="js-buttons js-allTasksDoneButton section__headingButton">
+        //     ${tasks.every(({ hideDoneTasks }) => hideDoneTasks === true) ? "disabled" : ""}
+        //     Ukończ wszystkie
+        //     </button>
+        //     `;
+        // }
+
+        let allTasksDoneButtonDisabled = "";
+        if (tasks.every(({ done }) => done === true)) {
+            allTasksDoneButtonDisabled = "disabled";
         }
+
+        document.querySelector(".js-buttons").innerHTML = `
+        <button class="js-buttons js-toggleHideTasksDoneButton section__headingButton">
+            ${hideDoneTasks === false ? "Ukryj" : "Pokaż"} ukończone
+        </button>
+        
+        <button class="js-buttons js-allTasksDoneButton section__headingButton" ${allTasksDoneButtonDisabled}>
+            Ukończ wszystkie
+        </button>
+    `;
+        checkAllTasksDone();
     };
+
 
 
     const renderTasks = () => { //renderuje zadania
@@ -208,4 +233,4 @@
     };
 
     init();
-}
+};
