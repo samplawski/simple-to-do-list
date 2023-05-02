@@ -19,8 +19,6 @@
 
 .section__heading {
     font-size: 20px;
-
-
 }
 
 .section__body {
@@ -37,6 +35,8 @@
     display: inline;
     background: none;
     border: none;
+    color: hsl(180, 100%, 25%);
+    transition: 0.5s;
 }
 
 @media (max-width: 767px) {
@@ -46,5 +46,5 @@
 }
 
 .section__headingButton:hover {
-    transform: scale(1.05);
+    color: hsl(180, 100%, 30%);
 }
