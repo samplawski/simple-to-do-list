@@ -17,7 +17,7 @@
     ];
 
 
-    let hideDoneTasks = false; //ukryj ukończone zadania; kliknięcie w przycisk będzie przełązało true/false
+    let hideDoneTasks = false;
 
 
     const addNewTask = (newTaskContent) => {
@@ -41,23 +41,6 @@
 
 
     const toggleTaskDone = (taskIndex) => {
-        // tasks = [
-        //     ...tasks.slice(0, taskIndex),
-        //     { ...tasks[taskIndex], done: !tasks[taskIndex].done },
-        //     ...tasks.slice(taskIndex + 1),
-        // ];
-
-        //lub
-
-        // tasks = tasks.map((task, index) => {
-        //     if (index === taskIndex) {
-        //         return { ...task, done: !task.done };
-        //     } else {
-        //         return task;
-        //     }
-        // });
-
-        // lub
 
         tasks = tasks.map((task, index) => index === taskIndex ? { ...task, done: !task.done } : task
         );
@@ -65,7 +48,7 @@
     };
 
 
-    const markAllTasksDone = () => { //do zaznaczania wszystkich jako ukończone
+    const markAllTasksDone = () => {
         tasks = tasks.map((task) => ({ ...task, done: true }));
         render();
     };
@@ -103,24 +86,11 @@
     };
 
 
-    const renderButtons = () => { //renderuje przyciski
+    const renderButtons = () => {
         if (!tasks.length) {
             document.querySelector(".js-buttons").innerHTML = "";
             return;
         };
-
-        // for (const task of tasks) {
-        //     document.querySelector(".js-buttons").innerHTML = `
-        //     <button class="js-buttons js-toggleHideTasksDoneButton section__headingButton">
-        //     ${hideDoneTasks === false ? "Ukryj" : "Pokaż"} ukończone
-        //      </button>
-
-        //     <button class="js-buttons js-allTasksDoneButton section__headingButton">
-        //     ${tasks.every(({ hideDoneTasks }) => hideDoneTasks === true) ? "disabled" : ""}
-        //     Ukończ wszystkie
-        //     </button>
-        //     `;
-        // }
 
         let allTasksDoneButtonDisabled = "";
         if (tasks.every(({ done }) => done === true)) {
@@ -141,7 +111,7 @@
 
 
 
-    const renderTasks = () => { //renderuje zadania
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -169,10 +139,7 @@
     };
 
 
-    const bindButtonsEvents = () => { //event listenery dodane do przycisków,
-        //tak jak renderTasks(); powinna zrobić HTML na podstawie np. let htmlString = ""; i
-        // let hideDoneTasks = false; , któtego wrzuci do elementu, w którym te przyciski mają się znaleźć
-
+    const bindButtonsEvents = () => {
         const toggleHideTasksDoneButton = document.querySelector(".js-toggleHideTasksDoneButton");
         const allTasksDoneButton = document.querySelector(".js-allTasksDoneButton");
 

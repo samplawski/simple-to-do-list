@@ -36,7 +36,7 @@
     background: none;
     border: none;
     color: hsl(180, 100%, 25%);
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 @media (max-width: 767px) {
@@ -47,4 +47,12 @@
 
 .section__headingButton:hover {
     color: hsl(180, 100%, 30%);
+}
+
+.section__headingButton:active {
+    color: hsl(180, 100%, 35%);
+}
+
+.section__headingButton:disabled {
+    color: hsl(0, 0%, 87%);
 }
