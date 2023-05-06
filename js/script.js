@@ -41,9 +41,11 @@
 
 
     const toggleTaskDone = (taskIndex) => {
-
-        tasks = tasks.map((task, index) => index === taskIndex ? { ...task, done: !task.done } : task
+        tasks = tasks.map((task, index) => index === taskIndex
+            ? { ...task, done: !task.done }
+            : task
         );
+
         render();
     };
 
@@ -84,7 +86,12 @@
             allTasksDoneButton.disabled = false;
         }
     };
+    // lub
+    //     const checkAllTasksDone = () => {
+    //         const allTasksDoneButton = document.querySelector(".js-allTasksDoneButton");
 
+    //         allTasksDoneButton.disabled = tasks.every(({ done }) => done === true);
+    //     };
 
     const renderButtons = () => {
         if (!tasks.length) {
@@ -129,7 +136,7 @@
                     <img
                         class="tasksList__button--trash"
                         src="./images/red-bin.jpg"
-                        alt="trash-bin-icon"🗑️
+                        alt="trash-bin-icon"🗑️>
                     </button>
                 </li>
         `;
@@ -174,19 +181,22 @@
         const inputElement = document.querySelector(".js-newTask");
         const newTaskContent = inputElement.value.trim();
 
-        if (newTaskContent === "") {
-            return;
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
         }
+        // if (newTaskContent === "") {
+        //     return;
+        // }
 
-        addNewTask(newTaskContent);
+        // addNewTask(newTaskContent);
         inputElement.value = "";
         inputElement.focus();
     };
 
 
-    const onAddTaskButtonClick = () => {
-        document.querySelector(".js-newTask").focus();
-    };
+    // const onAddTaskButtonClick = () => {
+    //     document.querySelector(".js-newTask").focus();
+    // };
 
 
     const init = () => {
@@ -195,8 +205,8 @@
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
 
-        const onAddTaskButtonClickFocus = document.querySelector(".form__button");
-        onAddTaskButtonClickFocus.addEventListener("click", onAddTaskButtonClick);
+        // const onAddTaskButtonClickFocus = document.querySelector(".form__button");
+        // onAddTaskButtonClickFocus.addEventListener("click", onAddTaskButtonClick);
     };
 
     init();
