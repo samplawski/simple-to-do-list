@@ -135,7 +135,7 @@
                     <button class="js-remove tasksList__button tasksList__button--remove">
                     <img
                         class="tasksList__button--trash"
-                        src="./images/red-bin.jpg"
+                        src="./images/bin-no-background.png"
                         alt="trash-bin-icon"🗑️>
                     </button>
                 </li>
